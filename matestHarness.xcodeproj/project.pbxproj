@@ -13,6 +13,7 @@
 		16EC36E32458F3FB0011FB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EC36E12458F3FB0011FB26 /* Main.storyboard */; };
 		16EC36EF2458F3FE0011FB26 /* matestHarnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC36EE2458F3FE0011FB26 /* matestHarnessTests.swift */; };
 		16EC36FA2458F3FE0011FB26 /* matestHarnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC36F92458F3FE0011FB26 /* matestHarnessUITests.swift */; };
+		16EC370C2458F55B0011FB26 /* libmouseControl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EC370B2458F55B0011FB26 /* libmouseControl.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		16EC36F52458F3FE0011FB26 /* matestHarnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = matestHarnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EC36F92458F3FE0011FB26 /* matestHarnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matestHarnessUITests.swift; sourceTree = "<group>"; };
 		16EC36FB2458F3FE0011FB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16EC370B2458F55B0011FB26 /* libmouseControl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmouseControl.dylib; path = "../../../../Library/Developer/Xcode/DerivedData/mouseControl-gkdrraclqphgrdfrahbjnylybnus/Build/Products/Debug/libmouseControl.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16EC370C2458F55B0011FB26 /* libmouseControl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +83,7 @@
 				16EC36ED2458F3FE0011FB26 /* matestHarnessTests */,
 				16EC36F82458F3FE0011FB26 /* matestHarnessUITests */,
 				16EC36D92458F3F00011FB26 /* Products */,
+				16EC370A2458F55A0011FB26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +126,14 @@
 				16EC36FB2458F3FE0011FB26 /* Info.plist */,
 			);
 			path = matestHarnessUITests;
+			sourceTree = "<group>";
+		};
+		16EC370A2458F55A0011FB26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16EC370B2458F55B0011FB26 /* libmouseControl.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,17 +432,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = matestHarness/matestHarness.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4NAYN932TD;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /Users/chrmey1/Source/personal/QuartzDiaplay/mouseControl/mouseControl;
 				INFOPLIST_FILE = matestHarness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/chrmey1/Library/Developer/Xcode/DerivedData/mouseControl-gkdrraclqphgrdfrahbjnylybnus/Build/Products/Debug";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meystrik.matestHarness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/chrmey1/Source/personal/QuartzDiaplay/mouseControl/mouseControl/mouseControl-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -440,10 +458,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = matestHarness/matestHarness.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4NAYN932TD;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = matestHarness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
